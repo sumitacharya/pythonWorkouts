@@ -24,15 +24,13 @@ while (guesses_left > 0):
 	guess=input("Guess a Number : ")
 	if guess>secret_num : 
 		print "Secret number is LOWER!"
-		guesses_left -= 1
-		print "Guesses left = ",guesses_left
 	elif guess<secret_num : 
 		print "Secret number is LARGER!."		
-		guesses_left -= 1
-		print "Guesses left = ",guesses_left
 	else : 
 		print "CONGRATULATIONS ! Your guess is Correct."
 		exit()	
+	guesses_left -= 1
+	print "Guesses left = ",guesses_left
 
 print "\nGame Over"
 print "The secret number is : ",secret_num
