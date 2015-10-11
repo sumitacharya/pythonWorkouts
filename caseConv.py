@@ -17,9 +17,9 @@ def lower2Upper(lower):
 	
 
 # test cases
-print upper2Lower('A')
-print upper2Lower('z')
+#print upper2Lower('A')
+#print upper2Lower('z')
 
-print"\n\n", lower2Upper('s')  
-print lower2Upper('K')
+#print"\n\n", lower2Upper('s')  
+#print lower2Upper('K')
 

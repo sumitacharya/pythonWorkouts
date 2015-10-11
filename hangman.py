@@ -2,11 +2,12 @@
 
 import random
 from caseConv import upper2Lower
+from colors import txtcolors
 
 # Just a small Banner
-print"				Hello"
+print txtcolors.RED +"				Hello"
 print" 			WELCOME TO THE GAME"
-print"				HANGMAN"
+print"				HANGMAN" + txtcolors.DEFAULT
 
 # Welcome the user
 name = raw_input("Enter your name : ")
@@ -35,21 +36,21 @@ while turns > 0:
 	if failed == 0 : 
 		break
 # Ask user to guess a character
-	print" "
-	guessChar=raw_input("Guess a character : ")
-	guessChar=upper2Lower(guessChar)
+	print ""
+	guessChar=raw_input("Guess a new character : ")
+	guessChar=upper2Lower(guessChar[0])
 	guesses = guesses + guessChar
 	
 	if guessChar not in word : 
 		turns = turns - 1
-		print"you have",turns,"turns left."
-
+		print txtcolors.GREEN + "you have",turns,"turns left."+ txtcolors.DEFAULT 
+	print"\nGuesses already made : ",guesses 
 
 # Win Or Lose
 if turns > 0 :
-	print"\nCongratulations..\nYou Won"
+	print txtcolors.RED+"\nCongratulations..\nYou Won"+txtcolors.DEFAULT
 else:
-	print "\nYou Lose ! \nThe correct word is : ", word		 	
+	print txtcolors.RED+"\nYou Lose ! \nThe correct word is : "+txtcolors.GREEN, word + txtcolors.DEFAULT		 	
 
 
 
