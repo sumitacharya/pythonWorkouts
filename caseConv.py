@@ -1,5 +1,5 @@
 #!/usr/bin/python
-# Aa small module that can be used in other programs
+# A small module that can be used in other programs
 
 # Coverts upper case to lower case
 def upper2Lower(upper):
